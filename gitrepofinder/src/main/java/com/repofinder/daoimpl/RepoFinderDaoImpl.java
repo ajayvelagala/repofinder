@@ -21,7 +21,7 @@ public class RepoFinderDaoImpl implements RepoFinderDao {
 	
 	public void insertUserInfo(String username,String searchResult) {
 		 try {
-		 String Query =" INSERT INTO USER_SEARCH(NAME, SEARCH_RESULT) VALUES(?,?)" ;
+		 String Query =" INSERT INTO USER_SEARCH_BY_RESULT(NAME, created_date, SEARCH_RESULT) VALUES(?,now(),?)" ;
 		 
 		 		Object args[] = new Object[] {username,searchResult};
 		 		int recordsInserted = jdbcTemplate.update(Query, args);
@@ -35,7 +35,7 @@ public class RepoFinderDaoImpl implements RepoFinderDao {
 
 	
 	public List<UserSearch> findAllByString() {
-        String sql = "SELECT * FROM USER_SEARCH";
+        String sql = "SELECT * FROM USER_SEARCH_BY_RESULT";
         List<UserSearch> customers = jdbcTemplate.query(
                 sql,
                 new UserSearchRowMapper());
@@ -47,7 +47,7 @@ public class RepoFinderDaoImpl implements RepoFinderDao {
 	    @Override
 	    public UserSearch mapRow(ResultSet rs, int rowNum) throws SQLException {
 	    	UserSearch userSearch = new UserSearch(rs.getString("id"), rs.getString("name"),
-	    			rs.getString("search_result"));
+	    			rs.getString("search_result"),rs.getString("created_date"));
 	    	
 	        return userSearch;
 

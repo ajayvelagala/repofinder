@@ -50,7 +50,7 @@ public class GitRepoFinderInitializerTest {
 	@Test
 	public void testRepoWithListCheckUser() {
 		when(repoFinderDao.findAllByString())
-			.thenReturn(asList(new UserSearch(null,"user", null)));
+			.thenReturn(asList(new UserSearch(null,"user", null,null)));
 		List<UserSearch> lu=repoService.findAll();
 		assertThat(lu.get(0).getName()).isEqualTo("user");
 	}
@@ -58,7 +58,7 @@ public class GitRepoFinderInitializerTest {
 	@Test
 	public void testRepoWithListIdAndResult() {
 		when(repoFinderDao.findAllByString())
-			.thenReturn(asList(new UserSearch("2",null, "c++")));
+			.thenReturn(asList(new UserSearch("2",null, "c++",null)));
 		List<UserSearch> lu=repoService.findAll();
 		assertThat(lu.get(0).getId()).isEqualTo("2");
 		
@@ -67,7 +67,7 @@ public class GitRepoFinderInitializerTest {
 	@Test
 	public void testRepoWith() {
 		when(repoFinderDao.findAllByString())
-			.thenReturn(asList(new UserSearch(null,null, "c++")));
+			.thenReturn(asList(new UserSearch(null,null, "c++",null)));
 		List<UserSearch> lu=repoService.findAll();
 		
 		assertThat(lu.get(0).getSearch_result()).isEqualTo("c++");

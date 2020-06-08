@@ -1,9 +1,18 @@
  DROP TABLE IF EXISTS USER_SEARCH;
-
+ DROP TABLE IF EXISTS USER_SEARCH_BY_RESULT;
 
 CREATE TABLE USER_SEARCH (
   id INT AUTO_INCREMENT  PRIMARY KEY,
   name VARCHAR(250) NOT NULL,
-  search_result VARCHAR(250) NOT NULL,
-  created_date timestamp 
+   created_date timestamp ,
+  search_result VARCHAR(250) NOT NULL
+ 
+);
+
+CREATE TABLE USER_SEARCH_BY_RESULT (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,  
+   created_date timestamp without time zone,
+  search_result VARCHAR(250) NOT NULL
+ 
 );

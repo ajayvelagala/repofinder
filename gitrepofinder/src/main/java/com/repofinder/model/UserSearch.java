@@ -5,6 +5,15 @@ public class UserSearch {
     private String id;
 	private String name;
 	private String search_result;
+	private String created_date;
+	
+	
+	public String getCreated_date() {
+		return created_date;
+	}
+	public void setCreated_date(String created_date) {
+		this.created_date = created_date;
+	}
 	public String getName() {
 		return name;
 	}
@@ -23,13 +32,14 @@ public class UserSearch {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
-	public UserSearch(String id, String name, String search_result) {
+	public UserSearch(String id, String name, String search_result, String created_date) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.search_result = search_result;
+		this.created_date = created_date;
 	}
+	
 
 	
 	

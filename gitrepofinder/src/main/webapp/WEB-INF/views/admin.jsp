@@ -57,6 +57,7 @@
         <thead>
             <tr>
              <th>No</th>
+              <th>Date</th>
                 <th>User Name</th>
                 <th>Search Result</th>
             </tr>
@@ -65,6 +66,7 @@
 		  <c:forEach items="${userSearch}" var="results" varStatus="tagStatus">
 		    <tr>
 		    <td>${results.id}</td>
+		    <td>${results.created_date}</td>
 		        <td>${results.name}</td>
 		        <td><a href='/adminFind?id=<c:out value="${results.search_result}" />' target="_blank">${results.search_result}</a></td>  
 		    </tr>
@@ -73,6 +75,7 @@
         <tfoot>
             <tr>
              <th>No</th>
+              <th>Date</th>
                 <th>User Name</th>
                 <th>Search Result</th>
                
