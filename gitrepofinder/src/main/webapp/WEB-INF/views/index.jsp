@@ -69,7 +69,7 @@
 		  <c:forEach items="${list.items}" var="items" varStatus="tagStatus">
 		    <tr>
 		        <td>${items.name}</td>
-		        <td>${items.clone_url}</td>
+		       <td> <a href='<c:out value="${items.clone_url}" />' target="_blank">${items.clone_url}</a></td>
 		        <td>${items.description}</td>
 		    </tr>
 		</c:forEach>

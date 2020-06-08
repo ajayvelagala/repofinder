@@ -66,7 +66,7 @@
 		    <tr>
 		    <td>${results.id}</td>
 		        <td>${results.name}</td>
-		        <td><a href='/adminFind?id=<c:out value="${results.search_result}"/>'>${results.search_result}</a></td>  
+		        <td><a href='/adminFind?id=<c:out value="${results.search_result}" />' target="_blank">${results.search_result}</a></td>  
 		    </tr>
 		</c:forEach>
         </tbody>
