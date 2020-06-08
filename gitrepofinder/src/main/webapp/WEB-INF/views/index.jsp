@@ -46,7 +46,11 @@
 <div class="col-md-6">
 </div>
 <div class="col-md-2">
+<div class="row">
+<p style="color:blue">User Name:</p>
+<p>${username}</p>&nbsp;&nbsp;		
 <a href ="/logout" >Logout</a>
+</div>
 </div>
 </div>	
 
