@@ -56,6 +56,7 @@
         <thead>
             <tr>
                 <th>Name of the project</th>
+                <th>Created Date</th>
                 <th>Clone url</th>
                 <th>Description</th>
                
@@ -65,6 +66,7 @@
 		  <c:forEach items="${list.items}" var="items" varStatus="tagStatus">
 		    <tr>
 		        <td>${items.name}</td>
+		        <td>${items.created_at}</td>
 		       <td> <a href='<c:out value="${items.clone_url}" />' target="_blank">${items.clone_url}</a></td>
 		        <td>${items.description}</td>
 		    </tr>
@@ -73,6 +75,7 @@
         <tfoot>
             <tr>
                 <th>Name of the project</th>
+                 <th>Created Date</th>
                 <th>Clone url</th>  
                 <th>Description</th>
                
