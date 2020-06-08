@@ -1,0 +1,9 @@
+ DROP TABLE IF EXISTS USER_SEARCH;
+
+
+CREATE TABLE USER_SEARCH (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  search_result VARCHAR(250) NOT NULL,
+  created_date timestamp 
+);

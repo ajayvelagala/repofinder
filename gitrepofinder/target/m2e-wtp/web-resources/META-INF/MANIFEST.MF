@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: repfinder
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Owner
+Implementation-Vendor-Id: com.repofinder
+Build-Jdk: 1.8.0_202-ea
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/gitrepofinder
+Created-By: Maven Integration for Eclipse
+
