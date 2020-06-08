@@ -38,7 +38,7 @@
   
   <div class="form-group" >
     <label for="exampleInputEmail1">Search By Language</label>
-    <form:input name ="lang" type="text" class="form-control" path="lang"  placeholder="Enter Languauge"/>
+    <form:input name ="lang" type="text" class="form-control" path="lang"  placeholder="Enter Language"/>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form:form>
