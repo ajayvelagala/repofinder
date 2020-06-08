@@ -28,19 +28,16 @@
 <body class="hold-transition skin-blue sidebar-mini">
  <div class="row">
 <div class="col-md-4">
-<form:form action ="find" modelAttribute="userForm" method="post">
+<form:form id="find" action ="find" modelAttribute="userForm" method="post">
   <div class="form-group" >
     <label for="exampleInputEmail1">Search By Topic</label>
-    <form:input name='topic' type="text" class="form-control" path="topic"  placeholder="Enter Topic"/>
-    
-    
+    <form:input name="topic" id="topic" type="text" class="form-control" path="topic"  placeholder="Enter Topic"/>
   </div>
-  
   <div class="form-group" >
     <label for="exampleInputEmail1">Search By Language</label>
-    <form:input name ="lang" type="text" class="form-control" path="lang"  placeholder="Enter Language"/>
+    <form:input name ="lang" id ="lang" type="text" class="form-control" path="lang"  placeholder="Enter Language"/>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <input type="submit" class="btn btn-primary" name ="submit" onClick="return checkTheForm();"/>
 </form:form>
 </div>
 <div class="col-md-6">
@@ -65,7 +62,6 @@
             </tr>
         </thead>
         <tbody>
-        
 		  <c:forEach items="${list.items}" var="items" varStatus="tagStatus">
 		    <tr>
 		        <td>${items.name}</td>
@@ -73,14 +69,11 @@
 		        <td>${items.description}</td>
 		    </tr>
 		</c:forEach>
-            
-           
-           
         </tbody>
         <tfoot>
             <tr>
                 <th>Name of the project</th>
-                <th>Clone url</th>
+                <th>Clone url</th>  
                 <th>Description</th>
                
             </tr>
@@ -96,26 +89,21 @@
     $('#example').DataTable();
 } ); 
 
-
-/* $(document).ready(function() {
-    $('#example').DataTable( {
-        "processing": true,
-        "serverSide": true,
-        "ajax": {
-            "url": "/dataTableAction",
-            "type": "POST"
-        },
-        "columns": [
-            { "data": "items.name" },
-            { "data": "items.clone_url" },
-            { "data": "items.description" },
-        
-        ]
-    } );
-} ); */
-
+ function checkTheForm() {
+		var topic=document.getElementById("topic").value;
+		var lang=document.getElementById("lang").value;
+		if(topic=="" && lang=="") {
+			alert("Enter any one of the fields");
+			return false;
+		} else {
+			return true;
+		}
+		
+	}
 </script>	
-	
+<script>
+
+</script>
 
 </body>
 </html>
